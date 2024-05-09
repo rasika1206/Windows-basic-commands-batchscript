@@ -1,5 +1,7 @@
 # Windows-basic-commands-batchscript
-Ex08-Windows-basic-commands-batchscript
+Ex08-Windows-basic-commands-batchscript      
+NAME: RASIKA. M    
+REG.NO: 212222230117
 
 # AIM:
 To execute Windows basic commands and batch scripting
@@ -29,61 +31,80 @@ Create a directory named "MyLab" on the desktop.
 
 
 ## COMMAND AND OUTPUT
-
-Change to the "MyLab" directory and create an empty text file named "MyFile.txt" inside it.
 mkdir %userprofile%\Desktop\MyLab
 
-![image](https://github.com/Jeevithaelumalai/Windows-basic-commands-batchscript/assets/118708245/e20f8141-6596-43d5-b989-2d2dab0d0dda)
+![image](https://github.com/23004513/Windows-basic-commands-batchscript/assets/138973069/1feba45d-0779-48f3-9e31-f5a0350f0a66)
+
+
+Change to the "MyLab" directory and create an empty text file named "MyFile.txt" inside it.
+
 
 ## COMMAND AND OUTPUT
+cd %userprofile%\Desktop\MyLab
+
+![image](https://github.com/23004513/Windows-basic-commands-batchscript/assets/138973069/2f186507-dd16-4ff6-ba9d-726aa06afb18)
+![image](https://github.com/23004513/Windows-basic-commands-batchscript/assets/138973069/7423c134-d5e4-4596-b6bc-ba9df42eb03d)
+
 
 List the contents of the "MyLab" directory.
-cd %userprofile%\Desktop\MyLab
-![image](https://github.com/Jeevithaelumalai/Windows-basic-commands-batchscript/assets/118708245/d27849bc-c467-4873-8c79-f7428a160e8c)
-![image](https://github.com/Jeevithaelumalai/Windows-basic-commands-batchscript/assets/118708245/1fa80caf-e9f6-43b8-ae3b-32796202e14c)
 
 
 ## COMMAND AND OUTPUT
+dir %userprofile%\Desktop\MyLab
+
+![image](https://github.com/23004513/Windows-basic-commands-batchscript/assets/138973069/7185c5be-7400-4896-b2a7-761467002990)
+
 
 Copy "MyFile.txt" to a new folder named "Backup" on the desktop.
-dir %userprofile%\Desktop\MyLab
-![image](https://github.com/Jeevithaelumalai/Windows-basic-commands-batchscript/assets/118708245/40de307a-60ec-44ed-a9d2-94ed73c8d346)
 
 ## COMMAND AND OUTPUT
+
+mkdir %userprofile%\Desktop\Backup
+
+copy MyFile.txt %userprofile%\Desktop\Backup
+
+![image](https://github.com/23004513/Windows-basic-commands-batchscript/assets/138973069/1f984e02-cf25-41c7-9534-4ff073959a2a)
+
+![image](https://github.com/23004513/Windows-basic-commands-batchscript/assets/138973069/1f6310cd-f10a-4e03-89ba-ff14f15a29cf)
+
+
 
 Move the "MyLab" directory to the "Documents" folder.
-mkdir %userprofile%\Desktop\Backup
-mkdir %userprofile%\Desktop\Backup
-
-![image](https://github.com/Jeevithaelumalai/Windows-basic-commands-batchscript/assets/118708245/47278c6b-2a0d-45f3-bdb9-2f0cc267fbc3)
-![image](https://github.com/Jeevithaelumalai/Windows-basic-commands-batchscript/assets/118708245/364ae2ec-b6ff-4583-b92f-bbc9533b06d0)
 
 
 ## COMMAND AND OUTPUT
-
 mv Myfile.txt %userprofile%\Documents
-![image](https://github.com/Jeevithaelumalai/Windows-basic-commands-batchscript/assets/118708245/99f98df3-adcf-47a5-befb-fdd0122af505)
+
+![image](https://github.com/23004513/Windows-basic-commands-batchscript/assets/138973069/a74e26cf-e31f-4372-bc5e-80c890174e37)
+
+
+
 
 ## Exercise 2: Advanced Batch Scripting
 Create a batch script named "BackupScript.bat" that creates a backup of files with the ".docx" extension from the "Documents" folder to a new folder named "DocBackup" on the desktop.
-
-
+```
 @echo off
 mkdir %userprofile%\Desktop\DocBackup
 copy %userprofile%\Documents\*.docx %userprofile%\Desktop\DocBackup
 echo Backup completed successfully!
-
+```
+Modify the script to delete files with the ".docx" extension from the "Documents" folder after creating the backup.
+```
+@echo off
+mkdir %userprofile%\Desktop\DocBackup
+copy %userprofile%\Documents\*.docx %userprofile%\Desktop\DocBackup
+del %userprofile%\Documents\*.docx
+echo Backup and deletion completed successfully!
+```
 
 
 
 ## OUTPUT
-![image](https://github.com/Jeevithaelumalai/Windows-basic-commands-batchscript/assets/118708245/c9ec83f6-a056-4184-8124-df0c065cc7e9)
 
-## RESULT:
+![image](https://github.com/23004513/Windows-basic-commands-batchscript/assets/138973069/a8e01095-f652-4407-896d-272deb28d452)
 
+
+
+
+# RESULT:
 The commands/batch files are executed successfully.
-
-
-
-
-
